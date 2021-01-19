@@ -27,8 +27,5 @@
     get_url:
        url: http://3.139.75.180:8081/nexus/service/local/artifact/maven/redirect?r=releases&g=com.wakaleo.gameoflife&a=gameoflife&p=war&v=9
        dest: /usr/share/tomcat/webapps/gameoflife.war
-  - name: Dispaly a message
-    shell: echo "version is not available"
-    when: v == "v>LATEST"
   - name: Start Tomcat
     service: name=tomcat state=started
